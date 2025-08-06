@@ -1,0 +1,24 @@
+import '/backend/backend.dart';
+import '/flutter_flow/flutter_flow_util.dart';
+import '/index.dart';
+import 'menu_send_search_widget.dart' show MenuSendSearchWidget;
+import 'package:flutter/material.dart';
+
+class MenuSendSearchModel extends FlutterFlowModel<MenuSendSearchWidget> {
+  ///  State fields for stateful widgets in this page.
+
+  // State field(s) for TextField widget.
+  FocusNode? textFieldFocusNode;
+  TextEditingController? textController;
+  String? Function(BuildContext, String?)? textControllerValidator;
+  List<TransactionsRecord> simpleSearchResults = [];
+
+  @override
+  void initState(BuildContext context) {}
+
+  @override
+  void dispose() {
+    textFieldFocusNode?.dispose();
+    textController?.dispose();
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "420929980688",
+    "project_id": "fastpay-36d61",
+    "storage_bucket": "fastpay-36d61.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:420929980688:android:29c2790c7ba44e16dcfd95",
+        "android_client_info": {
+          "package_name": "com.mycompany.fastpay"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXoMaIYEA-GQjCvKOYbTvjx6wXNLEA_6M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

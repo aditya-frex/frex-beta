@@ -81,16 +81,10 @@ class _CaProfileUsernameWidgetState extends State<CaProfileUsernameWidget> {
           title: Text(
             'Username',
             style: FlutterFlowTheme.of(context).titleMedium.override(
-                  font: GoogleFonts.ubuntu(
-                    fontWeight:
-                        FlutterFlowTheme.of(context).titleMedium.fontWeight,
-                    fontStyle:
-                        FlutterFlowTheme.of(context).titleMedium.fontStyle,
-                  ),
+                  fontFamily: FlutterFlowTheme.of(context).titleMediumFamily,
                   letterSpacing: 0.0,
-                  fontWeight:
-                      FlutterFlowTheme.of(context).titleMedium.fontWeight,
-                  fontStyle: FlutterFlowTheme.of(context).titleMedium.fontStyle,
+                  useGoogleFonts:
+                      !FlutterFlowTheme.of(context).titleMediumIsCustom,
                 ),
           ),
           actions: [],
@@ -121,21 +115,11 @@ class _CaProfileUsernameWidgetState extends State<CaProfileUsernameWidget> {
                     Text(
                       'Change Username',
                       style: FlutterFlowTheme.of(context).titleMedium.override(
-                            font: GoogleFonts.ubuntu(
-                              fontWeight: FlutterFlowTheme.of(context)
-                                  .titleMedium
-                                  .fontWeight,
-                              fontStyle: FlutterFlowTheme.of(context)
-                                  .titleMedium
-                                  .fontStyle,
-                            ),
+                            fontFamily:
+                                FlutterFlowTheme.of(context).titleMediumFamily,
                             letterSpacing: 0.0,
-                            fontWeight: FlutterFlowTheme.of(context)
-                                .titleMedium
-                                .fontWeight,
-                            fontStyle: FlutterFlowTheme.of(context)
-                                .titleMedium
-                                .fontStyle,
+                            useGoogleFonts: !FlutterFlowTheme.of(context)
+                                .titleMediumIsCustom,
                           ),
                     ),
                     Padding(
@@ -159,23 +143,13 @@ class _CaProfileUsernameWidgetState extends State<CaProfileUsernameWidget> {
                             hintStyle: FlutterFlowTheme.of(context)
                                 .labelLarge
                                 .override(
-                                  font: GoogleFonts.openSans(
-                                    fontWeight: FlutterFlowTheme.of(context)
-                                        .labelLarge
-                                        .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
-                                        .labelLarge
-                                        .fontStyle,
-                                  ),
+                                  fontFamily: FlutterFlowTheme.of(context)
+                                      .labelLargeFamily,
                                   color: FlutterFlowTheme.of(context)
                                       .secondaryText,
                                   letterSpacing: 0.0,
-                                  fontWeight: FlutterFlowTheme.of(context)
-                                      .labelLarge
-                                      .fontWeight,
-                                  fontStyle: FlutterFlowTheme.of(context)
-                                      .labelLarge
-                                      .fontStyle,
+                                  useGoogleFonts: !FlutterFlowTheme.of(context)
+                                      .labelLargeIsCustom,
                                 ),
                             enabledBorder: UnderlineInputBorder(
                               borderSide: BorderSide(
@@ -211,24 +185,15 @@ class _CaProfileUsernameWidgetState extends State<CaProfileUsernameWidget> {
                             contentPadding: EdgeInsetsDirectional.fromSTEB(
                                 15.0, 0.0, 15.0, 0.0),
                           ),
-                          style:
-                              FlutterFlowTheme.of(context).labelLarge.override(
-                                    font: GoogleFonts.openSans(
-                                      fontWeight: FlutterFlowTheme.of(context)
-                                          .labelLarge
-                                          .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .labelLarge
-                                          .fontStyle,
-                                    ),
-                                    letterSpacing: 0.0,
-                                    fontWeight: FlutterFlowTheme.of(context)
-                                        .labelLarge
-                                        .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
-                                        .labelLarge
-                                        .fontStyle,
-                                  ),
+                          style: FlutterFlowTheme.of(context)
+                              .labelLarge
+                              .override(
+                                fontFamily: FlutterFlowTheme.of(context)
+                                    .labelLargeFamily,
+                                letterSpacing: 0.0,
+                                useGoogleFonts: !FlutterFlowTheme.of(context)
+                                    .labelLargeIsCustom,
+                              ),
                           validator: _model.textControllerValidator
                               .asValidator(context),
                         ),
@@ -240,22 +205,12 @@ class _CaProfileUsernameWidgetState extends State<CaProfileUsernameWidget> {
                       child: Text(
                         'You can only change your username once every month.',
                         style: FlutterFlowTheme.of(context).labelLarge.override(
-                              font: GoogleFonts.openSans(
-                                fontWeight: FlutterFlowTheme.of(context)
-                                    .labelLarge
-                                    .fontWeight,
-                                fontStyle: FlutterFlowTheme.of(context)
-                                    .labelLarge
-                                    .fontStyle,
-                              ),
+                              fontFamily:
+                                  FlutterFlowTheme.of(context).labelLargeFamily,
                               color: FlutterFlowTheme.of(context).secondaryText,
                               letterSpacing: 0.0,
-                              fontWeight: FlutterFlowTheme.of(context)
-                                  .labelLarge
-                                  .fontWeight,
-                              fontStyle: FlutterFlowTheme.of(context)
-                                  .labelLarge
-                                  .fontStyle,
+                              useGoogleFonts: !FlutterFlowTheme.of(context)
+                                  .labelLargeIsCustom,
                             ),
                       ),
                     ),
@@ -278,17 +233,13 @@ class _CaProfileUsernameWidgetState extends State<CaProfileUsernameWidget> {
                         EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                     color: FlutterFlowTheme.of(context).primary,
                     textStyle: FlutterFlowTheme.of(context).labelLarge.override(
-                          font: GoogleFonts.openSans(
-                            fontWeight: FontWeight.w500,
-                            fontStyle: FlutterFlowTheme.of(context)
-                                .labelLarge
-                                .fontStyle,
-                          ),
+                          fontFamily:
+                              FlutterFlowTheme.of(context).labelLargeFamily,
                           color: FlutterFlowTheme.of(context).tertiary,
                           letterSpacing: 0.0,
                           fontWeight: FontWeight.w500,
-                          fontStyle:
-                              FlutterFlowTheme.of(context).labelLarge.fontStyle,
+                          useGoogleFonts:
+                              !FlutterFlowTheme.of(context).labelLargeIsCustom,
                         ),
                     elevation: 0.0,
                     borderSide: BorderSide(

@@ -123,17 +123,12 @@ class _ReadyAccountWidgetState extends State<ReadyAccountWidget> {
                       'You\'re All Set!',
                       style:
                           FlutterFlowTheme.of(context).headlineSmall.override(
-                                font: GoogleFonts.openSans(
-                                  fontWeight: FontWeight.bold,
-                                  fontStyle: FlutterFlowTheme.of(context)
-                                      .headlineSmall
-                                      .fontStyle,
-                                ),
+                                fontFamily: FlutterFlowTheme.of(context)
+                                    .headlineSmallFamily,
                                 letterSpacing: 0.0,
                                 fontWeight: FontWeight.bold,
-                                fontStyle: FlutterFlowTheme.of(context)
-                                    .headlineSmall
-                                    .fontStyle,
+                                useGoogleFonts: !FlutterFlowTheme.of(context)
+                                    .headlineSmallIsCustom,
                               ),
                     ),
                   ),
@@ -144,22 +139,12 @@ class _ReadyAccountWidgetState extends State<ReadyAccountWidget> {
                       'Your account is ready. Let\'s start for your better financial experience.',
                       textAlign: TextAlign.center,
                       style: FlutterFlowTheme.of(context).labelLarge.override(
-                            font: GoogleFonts.openSans(
-                              fontWeight: FlutterFlowTheme.of(context)
-                                  .labelLarge
-                                  .fontWeight,
-                              fontStyle: FlutterFlowTheme.of(context)
-                                  .labelLarge
-                                  .fontStyle,
-                            ),
+                            fontFamily:
+                                FlutterFlowTheme.of(context).labelLargeFamily,
                             color: FlutterFlowTheme.of(context).secondaryText,
                             letterSpacing: 0.0,
-                            fontWeight: FlutterFlowTheme.of(context)
-                                .labelLarge
-                                .fontWeight,
-                            fontStyle: FlutterFlowTheme.of(context)
-                                .labelLarge
-                                .fontStyle,
+                            useGoogleFonts: !FlutterFlowTheme.of(context)
+                                .labelLargeIsCustom,
                           ),
                     ),
                   ),
@@ -189,16 +174,13 @@ class _ReadyAccountWidgetState extends State<ReadyAccountWidget> {
                       EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                   color: FlutterFlowTheme.of(context).primary,
                   textStyle: FlutterFlowTheme.of(context).labelLarge.override(
-                        font: GoogleFonts.openSans(
-                          fontWeight: FontWeight.w500,
-                          fontStyle:
-                              FlutterFlowTheme.of(context).labelLarge.fontStyle,
-                        ),
+                        fontFamily:
+                            FlutterFlowTheme.of(context).labelLargeFamily,
                         color: FlutterFlowTheme.of(context).tertiary,
                         letterSpacing: 0.0,
                         fontWeight: FontWeight.w500,
-                        fontStyle:
-                            FlutterFlowTheme.of(context).labelLarge.fontStyle,
+                        useGoogleFonts:
+                            !FlutterFlowTheme.of(context).labelLargeIsCustom,
                       ),
                   elevation: 0.0,
                   borderSide: BorderSide(

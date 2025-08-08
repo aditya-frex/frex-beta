@@ -3,7 +3,6 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 import 'wait_withdraw_model.dart';
 export 'wait_withdraw_model.dart';
@@ -85,16 +84,13 @@ class _WaitWithdrawWidgetState extends State<WaitWithdrawWidget> {
                   'Please wait',
                   textAlign: TextAlign.center,
                   style: FlutterFlowTheme.of(context).titleLarge.override(
-                        font: GoogleFonts.openSans(
-                          fontWeight: FontWeight.w600,
-                          fontStyle:
-                              FlutterFlowTheme.of(context).titleLarge.fontStyle,
-                        ),
+                        fontFamily:
+                            FlutterFlowTheme.of(context).titleLargeFamily,
                         color: FlutterFlowTheme.of(context).primaryText,
                         letterSpacing: 0.0,
                         fontWeight: FontWeight.w600,
-                        fontStyle:
-                            FlutterFlowTheme.of(context).titleLarge.fontStyle,
+                        useGoogleFonts:
+                            !FlutterFlowTheme.of(context).titleLargeIsCustom,
                       ),
                 ),
                 Padding(

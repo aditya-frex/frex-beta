@@ -186,12 +186,8 @@ class _NavbarWidgetState extends State<NavbarWidget> {
                           style: FlutterFlowTheme.of(context)
                               .labelSmall
                               .override(
-                                font: GoogleFonts.openSans(
-                                  fontWeight: FontWeight.w500,
-                                  fontStyle: FlutterFlowTheme.of(context)
-                                      .labelSmall
-                                      .fontStyle,
-                                ),
+                                fontFamily: FlutterFlowTheme.of(context)
+                                    .labelSmallFamily,
                                 color: valueOrDefault<Color>(
                                   widget.pages == 0
                                       ? FlutterFlowTheme.of(context).primaryText
@@ -201,9 +197,8 @@ class _NavbarWidgetState extends State<NavbarWidget> {
                                 fontSize: 13.0,
                                 letterSpacing: 0.0,
                                 fontWeight: FontWeight.w500,
-                                fontStyle: FlutterFlowTheme.of(context)
-                                    .labelSmall
-                                    .fontStyle,
+                                useGoogleFonts: !FlutterFlowTheme.of(context)
+                                    .labelSmallIsCustom,
                               ),
                         ),
                       ),
@@ -301,12 +296,8 @@ class _NavbarWidgetState extends State<NavbarWidget> {
                           style: FlutterFlowTheme.of(context)
                               .labelSmall
                               .override(
-                                font: GoogleFonts.openSans(
-                                  fontWeight: FontWeight.w500,
-                                  fontStyle: FlutterFlowTheme.of(context)
-                                      .labelSmall
-                                      .fontStyle,
-                                ),
+                                fontFamily: FlutterFlowTheme.of(context)
+                                    .labelSmallFamily,
                                 color: valueOrDefault<Color>(
                                   widget.pages == 1
                                       ? FlutterFlowTheme.of(context).primaryText
@@ -316,9 +307,8 @@ class _NavbarWidgetState extends State<NavbarWidget> {
                                 fontSize: 13.0,
                                 letterSpacing: 0.0,
                                 fontWeight: FontWeight.w500,
-                                fontStyle: FlutterFlowTheme.of(context)
-                                    .labelSmall
-                                    .fontStyle,
+                                useGoogleFonts: !FlutterFlowTheme.of(context)
+                                    .labelSmallIsCustom,
                               ),
                         ),
                       ),
@@ -424,12 +414,8 @@ class _NavbarWidgetState extends State<NavbarWidget> {
                           style: FlutterFlowTheme.of(context)
                               .labelSmall
                               .override(
-                                font: GoogleFonts.openSans(
-                                  fontWeight: FontWeight.w500,
-                                  fontStyle: FlutterFlowTheme.of(context)
-                                      .labelSmall
-                                      .fontStyle,
-                                ),
+                                fontFamily: FlutterFlowTheme.of(context)
+                                    .labelSmallFamily,
                                 color: valueOrDefault<Color>(
                                   widget.pages == 3
                                       ? FlutterFlowTheme.of(context).primaryText
@@ -439,9 +425,8 @@ class _NavbarWidgetState extends State<NavbarWidget> {
                                 fontSize: 13.0,
                                 letterSpacing: 0.0,
                                 fontWeight: FontWeight.w500,
-                                fontStyle: FlutterFlowTheme.of(context)
-                                    .labelSmall
-                                    .fontStyle,
+                                useGoogleFonts: !FlutterFlowTheme.of(context)
+                                    .labelSmallIsCustom,
                               ),
                         ),
                       ),
@@ -539,12 +524,8 @@ class _NavbarWidgetState extends State<NavbarWidget> {
                           style: FlutterFlowTheme.of(context)
                               .labelSmall
                               .override(
-                                font: GoogleFonts.openSans(
-                                  fontWeight: FontWeight.w500,
-                                  fontStyle: FlutterFlowTheme.of(context)
-                                      .labelSmall
-                                      .fontStyle,
-                                ),
+                                fontFamily: FlutterFlowTheme.of(context)
+                                    .labelSmallFamily,
                                 color: valueOrDefault<Color>(
                                   widget.pages == 4
                                       ? FlutterFlowTheme.of(context).primaryText
@@ -554,9 +535,8 @@ class _NavbarWidgetState extends State<NavbarWidget> {
                                 fontSize: 13.0,
                                 letterSpacing: 0.0,
                                 fontWeight: FontWeight.w500,
-                                fontStyle: FlutterFlowTheme.of(context)
-                                    .labelSmall
-                                    .fontStyle,
+                                useGoogleFonts: !FlutterFlowTheme.of(context)
+                                    .labelSmallIsCustom,
                               ),
                         ),
                       ),

@@ -1,7 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'walkthrough_start3_model.dart';
 export 'walkthrough_start3_model.dart';
 
@@ -45,17 +44,13 @@ class _WalkthroughStart3WidgetState extends State<WalkthroughStart3Widget> {
           'Start sending money to your close friends and get a 5% bonus on the next payment',
           textAlign: TextAlign.start,
           style: FlutterFlowTheme.of(context).labelMedium.override(
-                font: GoogleFonts.openSans(
-                  fontWeight:
-                      FlutterFlowTheme.of(context).labelMedium.fontWeight,
-                  fontStyle: FlutterFlowTheme.of(context).labelMedium.fontStyle,
-                ),
+                fontFamily: FlutterFlowTheme.of(context).labelMediumFamily,
                 color: FlutterFlowTheme.of(context).info,
                 fontSize: 17.0,
                 letterSpacing: 0.0,
-                fontWeight: FlutterFlowTheme.of(context).labelMedium.fontWeight,
-                fontStyle: FlutterFlowTheme.of(context).labelMedium.fontStyle,
                 lineHeight: 1.5,
+                useGoogleFonts:
+                    !FlutterFlowTheme.of(context).labelMediumIsCustom,
               ),
         ),
       ),

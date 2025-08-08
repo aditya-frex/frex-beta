@@ -78,16 +78,10 @@ class _CaProfileManageActiveWidgetState
           title: Text(
             'Manage Active Status',
             style: FlutterFlowTheme.of(context).titleMedium.override(
-                  font: GoogleFonts.ubuntu(
-                    fontWeight:
-                        FlutterFlowTheme.of(context).titleMedium.fontWeight,
-                    fontStyle:
-                        FlutterFlowTheme.of(context).titleMedium.fontStyle,
-                  ),
+                  fontFamily: FlutterFlowTheme.of(context).titleMediumFamily,
                   letterSpacing: 0.0,
-                  fontWeight:
-                      FlutterFlowTheme.of(context).titleMedium.fontWeight,
-                  fontStyle: FlutterFlowTheme.of(context).titleMedium.fontStyle,
+                  useGoogleFonts:
+                      !FlutterFlowTheme.of(context).titleMediumIsCustom,
                 ),
           ),
           actions: [],
@@ -121,20 +115,16 @@ class _CaProfileManageActiveWidgetState
                       children: [
                         Text(
                           'Show Active Status',
-                          style:
-                              FlutterFlowTheme.of(context).labelLarge.override(
-                                    font: GoogleFonts.openSans(
-                                      fontWeight: FontWeight.w500,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .labelLarge
-                                          .fontStyle,
-                                    ),
-                                    letterSpacing: 0.0,
-                                    fontWeight: FontWeight.w500,
-                                    fontStyle: FlutterFlowTheme.of(context)
-                                        .labelLarge
-                                        .fontStyle,
-                                  ),
+                          style: FlutterFlowTheme.of(context)
+                              .labelLarge
+                              .override(
+                                fontFamily: FlutterFlowTheme.of(context)
+                                    .labelLargeFamily,
+                                letterSpacing: 0.0,
+                                fontWeight: FontWeight.w500,
+                                useGoogleFonts: !FlutterFlowTheme.of(context)
+                                    .labelLargeIsCustom,
+                              ),
                         ),
                         Row(
                           mainAxisSize: MainAxisSize.max,
@@ -215,23 +205,13 @@ class _CaProfileManageActiveWidgetState
                     child: Text(
                       'If you are active on Datingo, your \nstatus will be displayed to other people.',
                       style: FlutterFlowTheme.of(context).labelLarge.override(
-                            font: GoogleFonts.openSans(
-                              fontWeight: FlutterFlowTheme.of(context)
-                                  .labelLarge
-                                  .fontWeight,
-                              fontStyle: FlutterFlowTheme.of(context)
-                                  .labelLarge
-                                  .fontStyle,
-                            ),
+                            fontFamily:
+                                FlutterFlowTheme.of(context).labelLargeFamily,
                             color: FlutterFlowTheme.of(context).secondaryText,
                             letterSpacing: 0.0,
-                            fontWeight: FlutterFlowTheme.of(context)
-                                .labelLarge
-                                .fontWeight,
-                            fontStyle: FlutterFlowTheme.of(context)
-                                .labelLarge
-                                .fontStyle,
                             lineHeight: 1.6,
+                            useGoogleFonts: !FlutterFlowTheme.of(context)
+                                .labelLargeIsCustom,
                           ),
                     ),
                   ),
@@ -250,20 +230,16 @@ class _CaProfileManageActiveWidgetState
                       children: [
                         Text(
                           'Show Recently Active Status',
-                          style:
-                              FlutterFlowTheme.of(context).labelLarge.override(
-                                    font: GoogleFonts.openSans(
-                                      fontWeight: FontWeight.w500,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .labelLarge
-                                          .fontStyle,
-                                    ),
-                                    letterSpacing: 0.0,
-                                    fontWeight: FontWeight.w500,
-                                    fontStyle: FlutterFlowTheme.of(context)
-                                        .labelLarge
-                                        .fontStyle,
-                                  ),
+                          style: FlutterFlowTheme.of(context)
+                              .labelLarge
+                              .override(
+                                fontFamily: FlutterFlowTheme.of(context)
+                                    .labelLargeFamily,
+                                letterSpacing: 0.0,
+                                fontWeight: FontWeight.w500,
+                                useGoogleFonts: !FlutterFlowTheme.of(context)
+                                    .labelLargeIsCustom,
+                              ),
                         ),
                         Row(
                           mainAxisSize: MainAxisSize.max,
@@ -344,23 +320,13 @@ class _CaProfileManageActiveWidgetState
                     child: Text(
                       'Recently active status will be displayed\nif you have been active on Datingo in the last 24 hours.',
                       style: FlutterFlowTheme.of(context).labelLarge.override(
-                            font: GoogleFonts.openSans(
-                              fontWeight: FlutterFlowTheme.of(context)
-                                  .labelLarge
-                                  .fontWeight,
-                              fontStyle: FlutterFlowTheme.of(context)
-                                  .labelLarge
-                                  .fontStyle,
-                            ),
+                            fontFamily:
+                                FlutterFlowTheme.of(context).labelLargeFamily,
                             color: FlutterFlowTheme.of(context).secondaryText,
                             letterSpacing: 0.0,
-                            fontWeight: FlutterFlowTheme.of(context)
-                                .labelLarge
-                                .fontWeight,
-                            fontStyle: FlutterFlowTheme.of(context)
-                                .labelLarge
-                                .fontStyle,
                             lineHeight: 1.6,
+                            useGoogleFonts: !FlutterFlowTheme.of(context)
+                                .labelLargeIsCustom,
                           ),
                     ),
                   ),

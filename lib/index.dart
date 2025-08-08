@@ -89,3 +89,17 @@ export '/withdraw/withdraw_done/withdraw_done_widget.dart'
 export '/settings/e_payment_method3/e_payment_method3_widget.dart'
     show EPaymentMethod3Widget;
 export '/home/scan/scan_widget.dart' show ScanWidget;
+export '/register/app_flow/a_landing/a_landing_widget.dart' show ALandingWidget;
+export '/register/app_flow/b_login/b_login_widget.dart' show BLoginWidget;
+export '/register/app_flow/c_verification_code/c_verification_code_widget.dart'
+    show CVerificationCodeWidget;
+export '/register/app_flow/d_new_user/d_new_user_widget.dart'
+    show DNewUserWidget;
+export '/register/app_flow/e_new_account_addition/e_new_account_addition_widget.dart'
+    show ENewAccountAdditionWidget;
+export '/register/app_flow/f_my_account/f_my_account_widget.dart'
+    show FMyAccountWidget;
+export '/register/app_flow/h_profile/h_profile_widget.dart' show HProfileWidget;
+export '/register/app_flow/i_help/i_help_widget.dart' show IHelpWidget;
+export '/register/app_flow/g_transactions/g_transactions_widget.dart'
+    show GTransactionsWidget;

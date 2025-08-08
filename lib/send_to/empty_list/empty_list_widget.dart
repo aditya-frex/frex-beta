@@ -57,18 +57,11 @@ class _EmptyListWidgetState extends State<EmptyListWidget> {
               child: Text(
                 'There are no results for your query',
                 style: FlutterFlowTheme.of(context).labelLarge.override(
-                      font: GoogleFonts.openSans(
-                        fontWeight:
-                            FlutterFlowTheme.of(context).labelLarge.fontWeight,
-                        fontStyle:
-                            FlutterFlowTheme.of(context).labelLarge.fontStyle,
-                      ),
+                      fontFamily: FlutterFlowTheme.of(context).labelLargeFamily,
                       color: FlutterFlowTheme.of(context).secondaryText,
                       letterSpacing: 0.0,
-                      fontWeight:
-                          FlutterFlowTheme.of(context).labelLarge.fontWeight,
-                      fontStyle:
-                          FlutterFlowTheme.of(context).labelLarge.fontStyle,
+                      useGoogleFonts:
+                          !FlutterFlowTheme.of(context).labelLargeIsCustom,
                     ),
               ),
             ),

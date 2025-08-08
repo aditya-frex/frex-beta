@@ -3,33 +3,18 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'package:shared_preferences/shared_preferences.dart';
-
-const kThemeModeKey = '__theme_mode__';
-
-SharedPreferences? _prefs;
+enum DeviceSize {
+  mobile,
+  tablet,
+  desktop,
+}
 
 abstract class FlutterFlowTheme {
-  static Future initialize() async =>
-      _prefs = await SharedPreferences.getInstance();
-
-  static ThemeMode get themeMode {
-    final darkMode = _prefs?.getBool(kThemeModeKey);
-    return darkMode == null
-        ? ThemeMode.system
-        : darkMode
-            ? ThemeMode.dark
-            : ThemeMode.light;
-  }
-
-  static void saveThemeMode(ThemeMode mode) => mode == ThemeMode.system
-      ? _prefs?.remove(kThemeModeKey)
-      : _prefs?.setBool(kThemeModeKey, mode == ThemeMode.dark);
+  static DeviceSize deviceSize = DeviceSize.mobile;
 
   static FlutterFlowTheme of(BuildContext context) {
-    return Theme.of(context).brightness == Brightness.dark
-        ? DarkModeTheme()
-        : LightModeTheme();
+    deviceSize = getDeviceSize(context);
+    return LightModeTheme();
   }
 
   @Deprecated('Use primary instead')
@@ -131,7 +116,22 @@ abstract class FlutterFlowTheme {
   bool get bodySmallIsCustom => typography.bodySmallIsCustom;
   TextStyle get bodySmall => typography.bodySmall;
 
-  Typography get typography => ThemeTypography(this);
+  Typography get typography => {
+        DeviceSize.mobile: MobileTypography(this),
+        DeviceSize.tablet: TabletTypography(this),
+        DeviceSize.desktop: DesktopTypography(this),
+      }[deviceSize]!;
+}
+
+DeviceSize getDeviceSize(BuildContext context) {
+  final width = MediaQuery.sizeOf(context).width;
+  if (width < 479) {
+    return DeviceSize.mobile;
+  } else if (width < 991) {
+    return DeviceSize.tablet;
+  } else {
+    return DeviceSize.desktop;
+  }
 }
 
 class LightModeTheme extends FlutterFlowTheme {
@@ -143,16 +143,16 @@ class LightModeTheme extends FlutterFlowTheme {
   Color get tertiaryColor => tertiary;
 
   late Color primary = const Color(0xFFFFE900);
-  late Color secondary = const Color(0xC8FFFFFF);
-  late Color tertiary = const Color(0xFF0D3B66);
-  late Color alternate = const Color(0xFFE5E7EB);
-  late Color primaryText = const Color(0xFF15161E);
+  late Color secondary = const Color(0xFFECECEC);
+  late Color tertiary = const Color(0xFF000000);
+  late Color alternate = const Color(0xFFFFFFFF);
+  late Color primaryText = const Color(0xFF000000);
   late Color secondaryText = const Color(0xFF606A85);
-  late Color primaryBackground = const Color(0xFFF1F4F8);
+  late Color primaryBackground = const Color(0xFFECECEC);
   late Color secondaryBackground = const Color(0xFFFFFFFF);
-  late Color accent1 = const Color(0x4D9489F5);
-  late Color accent2 = const Color(0x4C39D2C0);
-  late Color accent3 = const Color(0x4CEE8B60);
+  late Color accent1 = const Color(0xFF300060);
+  late Color accent2 = const Color(0xFFEB0000);
+  late Color accent3 = const Color(0xFF00F134);
   late Color accent4 = const Color(0x9AFFFFFF);
   late Color success = const Color(0xFF048178);
   late Color warning = const Color(0xFFFCDC0C);
@@ -208,8 +208,121 @@ abstract class Typography {
   TextStyle get bodySmall;
 }
 
-class ThemeTypography extends Typography {
-  ThemeTypography(this.theme);
+class MobileTypography extends Typography {
+  MobileTypography(this.theme);
+
+  final FlutterFlowTheme theme;
+
+  String get displayLargeFamily => 'Poppins';
+  bool get displayLargeIsCustom => false;
+  TextStyle get displayLarge => GoogleFonts.poppins(
+        color: theme.primaryText,
+        fontWeight: FontWeight.normal,
+        fontSize: 57.0,
+        fontStyle: FontStyle.normal,
+      );
+  String get displayMediumFamily => 'Poppins';
+  bool get displayMediumIsCustom => false;
+  TextStyle get displayMedium => GoogleFonts.poppins(
+        color: theme.primaryText,
+        fontWeight: FontWeight.normal,
+        fontSize: 45.0,
+        fontStyle: FontStyle.normal,
+      );
+  String get displaySmallFamily => 'Poppins';
+  bool get displaySmallIsCustom => false;
+  TextStyle get displaySmall => GoogleFonts.poppins(
+        color: theme.primaryText,
+        fontWeight: FontWeight.w600,
+        fontSize: 36.0,
+      );
+  String get headlineLargeFamily => 'Poppins';
+  bool get headlineLargeIsCustom => false;
+  TextStyle get headlineLarge => GoogleFonts.poppins(
+        color: theme.primaryText,
+        fontWeight: FontWeight.normal,
+        fontSize: 32.0,
+      );
+  String get headlineMediumFamily => 'Poppins';
+  bool get headlineMediumIsCustom => false;
+  TextStyle get headlineMedium => GoogleFonts.poppins(
+        color: theme.primaryText,
+        fontWeight: FontWeight.w500,
+        fontSize: 24.0,
+      );
+  String get headlineSmallFamily => 'Poppins';
+  bool get headlineSmallIsCustom => false;
+  TextStyle get headlineSmall => GoogleFonts.poppins(
+        color: theme.primaryText,
+        fontWeight: FontWeight.bold,
+        fontSize: 22.0,
+      );
+  String get titleLargeFamily => 'Poppins';
+  bool get titleLargeIsCustom => false;
+  TextStyle get titleLarge => GoogleFonts.poppins(
+        color: theme.primaryText,
+        fontWeight: FontWeight.w500,
+        fontSize: 22.0,
+      );
+  String get titleMediumFamily => 'Roboto';
+  bool get titleMediumIsCustom => false;
+  TextStyle get titleMedium => GoogleFonts.roboto(
+        color: theme.info,
+        fontWeight: FontWeight.w500,
+        fontSize: 18.0,
+      );
+  String get titleSmallFamily => 'Roboto';
+  bool get titleSmallIsCustom => false;
+  TextStyle get titleSmall => GoogleFonts.roboto(
+        color: theme.info,
+        fontWeight: FontWeight.w500,
+        fontSize: 16.0,
+      );
+  String get labelLargeFamily => 'Poppins';
+  bool get labelLargeIsCustom => false;
+  TextStyle get labelLarge => GoogleFonts.poppins(
+        color: theme.secondaryText,
+        fontWeight: FontWeight.w500,
+        fontSize: 16.0,
+      );
+  String get labelMediumFamily => 'Poppins';
+  bool get labelMediumIsCustom => false;
+  TextStyle get labelMedium => GoogleFonts.poppins(
+        color: theme.secondaryText,
+        fontWeight: FontWeight.w500,
+        fontSize: 14.0,
+      );
+  String get labelSmallFamily => 'Poppins';
+  bool get labelSmallIsCustom => false;
+  TextStyle get labelSmall => GoogleFonts.poppins(
+        color: theme.secondaryText,
+        fontWeight: FontWeight.w500,
+        fontSize: 12.0,
+      );
+  String get bodyLargeFamily => 'Roboto';
+  bool get bodyLargeIsCustom => false;
+  TextStyle get bodyLarge => GoogleFonts.roboto(
+        color: theme.primaryText,
+        fontSize: 16.0,
+      );
+  String get bodyMediumFamily => 'Roboto';
+  bool get bodyMediumIsCustom => false;
+  TextStyle get bodyMedium => GoogleFonts.roboto(
+        color: theme.primaryText,
+        fontWeight: FontWeight.normal,
+        fontSize: 14.0,
+      );
+  String get bodySmallFamily => 'Roboto';
+  bool get bodySmallIsCustom => false;
+  TextStyle get bodySmall => GoogleFonts.roboto(
+        color: theme.primaryText,
+        fontWeight: FontWeight.normal,
+        fontSize: 12.0,
+      );
+}
+
+class TabletTypography extends Typography {
+  TabletTypography(this.theme);
 
   final FlutterFlowTheme theme;
 
@@ -319,30 +432,115 @@ class ThemeTypography extends Typography {
       );
 }
 
-class DarkModeTheme extends FlutterFlowTheme {
-  @Deprecated('Use primary instead')
-  Color get primaryColor => primary;
-  @Deprecated('Use secondary instead')
-  Color get secondaryColor => secondary;
-  @Deprecated('Use tertiary instead')
-  Color get tertiaryColor => tertiary;
+class DesktopTypography extends Typography {
+  DesktopTypography(this.theme);
 
-  late Color primary = const Color(0xFF6F61EF);
-  late Color secondary = const Color(0xFF39D2C0);
-  late Color tertiary = const Color(0xFFEE8B60);
-  late Color alternate = const Color(0xFF313442);
-  late Color primaryText = const Color(0xFFFFFFFF);
-  late Color secondaryText = const Color(0xFFA9ADC6);
-  late Color primaryBackground = const Color(0xFF15161E);
-  late Color secondaryBackground = const Color(0xFF1B1D27);
-  late Color accent1 = const Color(0x4D9489F5);
-  late Color accent2 = const Color(0x4C39D2C0);
-  late Color accent3 = const Color(0x4CEE8B60);
-  late Color accent4 = const Color(0x981D2428);
-  late Color success = const Color(0xFF048178);
-  late Color warning = const Color(0xFFFCDC0C);
-  late Color error = const Color(0xFFFF5963);
-  late Color info = const Color(0xFFFFFFFF);
+  final FlutterFlowTheme theme;
+
+  String get displayLargeFamily => 'Open Sans';
+  bool get displayLargeIsCustom => false;
+  TextStyle get displayLarge => GoogleFonts.openSans(
+        color: theme.primaryText,
+        fontWeight: FontWeight.normal,
+        fontSize: 57.0,
+      );
+  String get displayMediumFamily => 'Open Sans';
+  bool get displayMediumIsCustom => false;
+  TextStyle get displayMedium => GoogleFonts.openSans(
+        color: theme.primaryText,
+        fontWeight: FontWeight.normal,
+        fontSize: 45.0,
+      );
+  String get displaySmallFamily => 'Open Sans';
+  bool get displaySmallIsCustom => false;
+  TextStyle get displaySmall => GoogleFonts.openSans(
+        color: theme.primaryText,
+        fontWeight: FontWeight.w600,
+        fontSize: 36.0,
+      );
+  String get headlineLargeFamily => 'Open Sans';
+  bool get headlineLargeIsCustom => false;
+  TextStyle get headlineLarge => GoogleFonts.openSans(
+        color: theme.primaryText,
+        fontWeight: FontWeight.normal,
+        fontSize: 32.0,
+      );
+  String get headlineMediumFamily => 'Open Sans';
+  bool get headlineMediumIsCustom => false;
+  TextStyle get headlineMedium => GoogleFonts.openSans(
+        color: theme.primaryText,
+        fontWeight: FontWeight.w500,
+        fontSize: 24.0,
+      );
+  String get headlineSmallFamily => 'Open Sans';
+  bool get headlineSmallIsCustom => false;
+  TextStyle get headlineSmall => GoogleFonts.openSans(
+        color: theme.primaryText,
+        fontWeight: FontWeight.bold,
+        fontSize: 22.0,
+      );
+  String get titleLargeFamily => 'Open Sans';
+  bool get titleLargeIsCustom => false;
+  TextStyle get titleLarge => GoogleFonts.openSans(
+        color: theme.primaryText,
+        fontWeight: FontWeight.w500,
+        fontSize: 22.0,
+      );
+  String get titleMediumFamily => 'Ubuntu';
+  bool get titleMediumIsCustom => false;
+  TextStyle get titleMedium => GoogleFonts.ubuntu(
+        color: theme.info,
+        fontWeight: FontWeight.w500,
+        fontSize: 18.0,
+      );
+  String get titleSmallFamily => 'Ubuntu';
+  bool get titleSmallIsCustom => false;
+  TextStyle get titleSmall => GoogleFonts.ubuntu(
+        color: theme.info,
+        fontWeight: FontWeight.w500,
+        fontSize: 16.0,
+      );
+  String get labelLargeFamily => 'Open Sans';
+  bool get labelLargeIsCustom => false;
+  TextStyle get labelLarge => GoogleFonts.openSans(
+        color: theme.secondaryText,
+        fontWeight: FontWeight.w500,
+        fontSize: 16.0,
+      );
+  String get labelMediumFamily => 'Open Sans';
+  bool get labelMediumIsCustom => false;
+  TextStyle get labelMedium => GoogleFonts.openSans(
+        color: theme.secondaryText,
+        fontWeight: FontWeight.w500,
+        fontSize: 14.0,
+      );
+  String get labelSmallFamily => 'Open Sans';
+  bool get labelSmallIsCustom => false;
+  TextStyle get labelSmall => GoogleFonts.openSans(
+        color: theme.secondaryText,
+        fontWeight: FontWeight.w500,
+        fontSize: 12.0,
+      );
+  String get bodyLargeFamily => 'Ubuntu';
+  bool get bodyLargeIsCustom => false;
+  TextStyle get bodyLarge => GoogleFonts.ubuntu(
+        color: theme.primaryText,
+        fontSize: 16.0,
+      );
+  String get bodyMediumFamily => 'Ubuntu';
+  bool get bodyMediumIsCustom => false;
+  TextStyle get bodyMedium => GoogleFonts.ubuntu(
+        color: theme.primaryText,
+        fontWeight: FontWeight.normal,
+        fontSize: 14.0,
+      );
+  String get bodySmallFamily => 'Ubuntu';
+  bool get bodySmallIsCustom => false;
+  TextStyle get bodySmall => GoogleFonts.ubuntu(
+        color: theme.primaryText,
+        fontWeight: FontWeight.normal,
+        fontSize: 12.0,
+      );
 }
 
 extension TextStyleHelper on TextStyle {

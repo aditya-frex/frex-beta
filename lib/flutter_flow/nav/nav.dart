@@ -6,6 +6,8 @@ import '/backend/backend.dart';
 
 import '/auth/custom_auth/custom_auth_user_provider.dart';
 
+import '/main.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 
 import '/index.dart';
@@ -76,13 +78,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       refreshListenable: appStateNotifier,
       navigatorKey: appNavigatorKey,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? AHomeWidget() : AWalkthroughWidget(),
+          appStateNotifier.loggedIn ? NavBarPage() : AWalkthroughWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) =>
-              appStateNotifier.loggedIn ? AHomeWidget() : AWalkthroughWidget(),
+              appStateNotifier.loggedIn ? NavBarPage() : AWalkthroughWidget(),
         ),
         FFRoute(
           name: AWalkthroughWidget.routeName,
@@ -463,7 +465,68 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: ScanWidget.routeName,
           path: ScanWidget.routePath,
           builder: (context, params) => ScanWidget(),
-        )
+        ),
+        FFRoute(
+          name: ALandingWidget.routeName,
+          path: ALandingWidget.routePath,
+          builder: (context, params) => ALandingWidget(),
+        ),
+        FFRoute(
+          name: BLoginWidget.routeName,
+          path: BLoginWidget.routePath,
+          builder: (context, params) => BLoginWidget(),
+        ),
+        FFRoute(
+          name: CVerificationCodeWidget.routeName,
+          path: CVerificationCodeWidget.routePath,
+          builder: (context, params) => CVerificationCodeWidget(),
+        ),
+        FFRoute(
+          name: DNewUserWidget.routeName,
+          path: DNewUserWidget.routePath,
+          builder: (context, params) => DNewUserWidget(),
+        ),
+        FFRoute(
+          name: ENewAccountAdditionWidget.routeName,
+          path: ENewAccountAdditionWidget.routePath,
+          builder: (context, params) => ENewAccountAdditionWidget(),
+        ),
+        FFRoute(
+            name: FMyAccountWidget.routeName,
+            path: FMyAccountWidget.routePath,
+            builder: (context, params) => params.isEmpty
+                ? NavBarPage(initialPage: 'fMyAccount')
+                : NavBarPage(
+                    initialPage: 'fMyAccount',
+                    page: FMyAccountWidget(),
+                  )),
+        FFRoute(
+            name: HProfileWidget.routeName,
+            path: HProfileWidget.routePath,
+            builder: (context, params) => params.isEmpty
+                ? NavBarPage(initialPage: 'hProfile')
+                : NavBarPage(
+                    initialPage: 'hProfile',
+                    page: HProfileWidget(),
+                  )),
+        FFRoute(
+            name: IHelpWidget.routeName,
+            path: IHelpWidget.routePath,
+            builder: (context, params) => params.isEmpty
+                ? NavBarPage(initialPage: 'iHelp')
+                : NavBarPage(
+                    initialPage: 'iHelp',
+                    page: IHelpWidget(),
+                  )),
+        FFRoute(
+            name: GTransactionsWidget.routeName,
+            path: GTransactionsWidget.routePath,
+            builder: (context, params) => params.isEmpty
+                ? NavBarPage(initialPage: 'gTransactions')
+                : NavBarPage(
+                    initialPage: 'gTransactions',
+                    page: GTransactionsWidget(),
+                  ))
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
 
@@ -650,10 +713,10 @@ class FFRoute {
               : builder(context, ffParams);
           final child = appStateNotifier.loading
               ? Container(
-                  color: Colors.transparent,
+                  color: FlutterFlowTheme.of(context).primary,
                   child: Image.asset(
-                    'assets/images/gifLoading.gif',
-                    fit: BoxFit.cover,
+                    'assets/images/frex_logo_icon.png',
+                    fit: BoxFit.fitWidth,
                   ),
                 )
               : page;

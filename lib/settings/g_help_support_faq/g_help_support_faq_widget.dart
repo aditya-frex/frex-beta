@@ -77,16 +77,10 @@ class _GHelpSupportFaqWidgetState extends State<GHelpSupportFaqWidget> {
           title: Text(
             'FAQ',
             style: FlutterFlowTheme.of(context).titleMedium.override(
-                  font: GoogleFonts.ubuntu(
-                    fontWeight:
-                        FlutterFlowTheme.of(context).titleMedium.fontWeight,
-                    fontStyle:
-                        FlutterFlowTheme.of(context).titleMedium.fontStyle,
-                  ),
+                  fontFamily: FlutterFlowTheme.of(context).titleMediumFamily,
                   letterSpacing: 0.0,
-                  fontWeight:
-                      FlutterFlowTheme.of(context).titleMedium.fontWeight,
-                  fontStyle: FlutterFlowTheme.of(context).titleMedium.fontStyle,
+                  useGoogleFonts:
+                      !FlutterFlowTheme.of(context).titleMediumIsCustom,
                 ),
           ),
           actions: [],
@@ -137,22 +131,13 @@ class _GHelpSupportFaqWidgetState extends State<GHelpSupportFaqWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .labelLarge
                                     .override(
-                                      font: GoogleFonts.openSans(
-                                        fontWeight: FlutterFlowTheme.of(context)
-                                            .labelLarge
-                                            .fontWeight,
-                                        fontStyle: FlutterFlowTheme.of(context)
-                                            .labelLarge
-                                            .fontStyle,
-                                      ),
+                                      fontFamily: FlutterFlowTheme.of(context)
+                                          .labelLargeFamily,
                                       letterSpacing: 0.0,
-                                      fontWeight: FlutterFlowTheme.of(context)
-                                          .labelLarge
-                                          .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .labelLarge
-                                          .fontStyle,
                                       lineHeight: 1.2,
+                                      useGoogleFonts:
+                                          !FlutterFlowTheme.of(context)
+                                              .labelLargeIsCustom,
                                     ),
                               ),
                             ),
@@ -182,21 +167,12 @@ class _GHelpSupportFaqWidgetState extends State<GHelpSupportFaqWidget> {
                     isDense: false,
                     hintText: 'Search',
                     hintStyle: FlutterFlowTheme.of(context).labelLarge.override(
-                          font: GoogleFonts.openSans(
-                            fontWeight: FlutterFlowTheme.of(context)
-                                .labelLarge
-                                .fontWeight,
-                            fontStyle: FlutterFlowTheme.of(context)
-                                .labelLarge
-                                .fontStyle,
-                          ),
+                          fontFamily:
+                              FlutterFlowTheme.of(context).labelLargeFamily,
                           color: FlutterFlowTheme.of(context).secondaryText,
                           letterSpacing: 0.0,
-                          fontWeight: FlutterFlowTheme.of(context)
-                              .labelLarge
-                              .fontWeight,
-                          fontStyle:
-                              FlutterFlowTheme.of(context).labelLarge.fontStyle,
+                          useGoogleFonts:
+                              !FlutterFlowTheme.of(context).labelLargeIsCustom,
                         ),
                     enabledBorder: UnderlineInputBorder(
                       borderSide: BorderSide(
@@ -250,18 +226,11 @@ class _GHelpSupportFaqWidgetState extends State<GHelpSupportFaqWidget> {
                         : null,
                   ),
                   style: FlutterFlowTheme.of(context).labelLarge.override(
-                        font: GoogleFonts.openSans(
-                          fontWeight: FlutterFlowTheme.of(context)
-                              .labelLarge
-                              .fontWeight,
-                          fontStyle:
-                              FlutterFlowTheme.of(context).labelLarge.fontStyle,
-                        ),
+                        fontFamily:
+                            FlutterFlowTheme.of(context).labelLargeFamily,
                         letterSpacing: 0.0,
-                        fontWeight:
-                            FlutterFlowTheme.of(context).labelLarge.fontWeight,
-                        fontStyle:
-                            FlutterFlowTheme.of(context).labelLarge.fontStyle,
+                        useGoogleFonts:
+                            !FlutterFlowTheme.of(context).labelLargeIsCustom,
                       ),
                   validator:
                       _model.textControllerValidator.asValidator(context),
@@ -324,19 +293,14 @@ class _GHelpSupportFaqWidgetState extends State<GHelpSupportFaqWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .titleSmall
                                             .override(
-                                              font: GoogleFonts.ubuntu(
-                                                fontWeight: FontWeight.w500,
-                                                fontStyle:
-                                                    FlutterFlowTheme.of(context)
-                                                        .titleSmall
-                                                        .fontStyle,
-                                              ),
+                                              fontFamily:
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleSmallFamily,
                                               letterSpacing: 0.0,
                                               fontWeight: FontWeight.w500,
-                                              fontStyle:
-                                                  FlutterFlowTheme.of(context)
-                                                      .titleSmall
-                                                      .fontStyle,
+                                              useGoogleFonts:
+                                                  !FlutterFlowTheme.of(context)
+                                                      .titleSmallIsCustom,
                                             ),
                                       ),
                                     ),
@@ -387,27 +351,15 @@ class _GHelpSupportFaqWidgetState extends State<GHelpSupportFaqWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .labelLarge
                                         .override(
-                                          font: GoogleFonts.openSans(
-                                            fontWeight:
-                                                FlutterFlowTheme.of(context)
-                                                    .labelLarge
-                                                    .fontWeight,
-                                            fontStyle:
-                                                FlutterFlowTheme.of(context)
-                                                    .labelLarge
-                                                    .fontStyle,
-                                          ),
+                                          fontFamily:
+                                              FlutterFlowTheme.of(context)
+                                                  .labelLargeFamily,
                                           color: FlutterFlowTheme.of(context)
                                               .secondaryText,
                                           letterSpacing: 0.0,
-                                          fontWeight:
-                                              FlutterFlowTheme.of(context)
-                                                  .labelLarge
-                                                  .fontWeight,
-                                          fontStyle:
-                                              FlutterFlowTheme.of(context)
-                                                  .labelLarge
-                                                  .fontStyle,
+                                          useGoogleFonts:
+                                              !FlutterFlowTheme.of(context)
+                                                  .labelLargeIsCustom,
                                         ),
                                   ),
                                 ),

@@ -65,23 +65,13 @@ class _QRScanWithdrawWidgetState extends State<QRScanWithdrawWidget> {
                         'Scan QR Code',
                         style:
                             FlutterFlowTheme.of(context).headlineSmall.override(
-                                  font: GoogleFonts.openSans(
-                                    fontWeight: FlutterFlowTheme.of(context)
-                                        .headlineSmall
-                                        .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
-                                        .headlineSmall
-                                        .fontStyle,
-                                  ),
+                                  fontFamily: FlutterFlowTheme.of(context)
+                                      .headlineSmallFamily,
                                   color: FlutterFlowTheme.of(context).info,
                                   fontSize: 28.0,
                                   letterSpacing: 0.0,
-                                  fontWeight: FlutterFlowTheme.of(context)
-                                      .headlineSmall
-                                      .fontWeight,
-                                  fontStyle: FlutterFlowTheme.of(context)
-                                      .headlineSmall
-                                      .fontStyle,
+                                  useGoogleFonts: !FlutterFlowTheme.of(context)
+                                      .headlineSmallIsCustom,
                                 ),
                       ),
                     ),
@@ -91,22 +81,12 @@ class _QRScanWithdrawWidgetState extends State<QRScanWithdrawWidget> {
                       child: Text(
                         'Point the camera at the QR Code to scan',
                         style: FlutterFlowTheme.of(context).labelLarge.override(
-                              font: GoogleFonts.openSans(
-                                fontWeight: FlutterFlowTheme.of(context)
-                                    .labelLarge
-                                    .fontWeight,
-                                fontStyle: FlutterFlowTheme.of(context)
-                                    .labelLarge
-                                    .fontStyle,
-                              ),
+                              fontFamily:
+                                  FlutterFlowTheme.of(context).labelLargeFamily,
                               color: FlutterFlowTheme.of(context).info,
                               letterSpacing: 0.0,
-                              fontWeight: FlutterFlowTheme.of(context)
-                                  .labelLarge
-                                  .fontWeight,
-                              fontStyle: FlutterFlowTheme.of(context)
-                                  .labelLarge
-                                  .fontStyle,
+                              useGoogleFonts: !FlutterFlowTheme.of(context)
+                                  .labelLargeIsCustom,
                             ),
                       ),
                     ),
@@ -149,17 +129,13 @@ class _QRScanWithdrawWidgetState extends State<QRScanWithdrawWidget> {
                         EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                     color: FlutterFlowTheme.of(context).primary,
                     textStyle: FlutterFlowTheme.of(context).labelLarge.override(
-                          font: GoogleFonts.openSans(
-                            fontWeight: FontWeight.w500,
-                            fontStyle: FlutterFlowTheme.of(context)
-                                .labelLarge
-                                .fontStyle,
-                          ),
+                          fontFamily:
+                              FlutterFlowTheme.of(context).labelLargeFamily,
                           color: FlutterFlowTheme.of(context).tertiary,
                           letterSpacing: 0.0,
                           fontWeight: FontWeight.w500,
-                          fontStyle:
-                              FlutterFlowTheme.of(context).labelLarge.fontStyle,
+                          useGoogleFonts:
+                              !FlutterFlowTheme.of(context).labelLargeIsCustom,
                         ),
                     elevation: 0.0,
                     borderSide: BorderSide(

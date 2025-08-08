@@ -2,7 +2,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'dialog_model.dart';
 export 'dialog_model.dart';
 
@@ -54,17 +53,11 @@ class _DialogWidgetState extends State<DialogWidget> {
               Text(
                 'Important!',
                 style: FlutterFlowTheme.of(context).titleMedium.override(
-                      font: GoogleFonts.ubuntu(
-                        fontWeight:
-                            FlutterFlowTheme.of(context).titleMedium.fontWeight,
-                        fontStyle:
-                            FlutterFlowTheme.of(context).titleMedium.fontStyle,
-                      ),
+                      fontFamily:
+                          FlutterFlowTheme.of(context).titleMediumFamily,
                       letterSpacing: 0.0,
-                      fontWeight:
-                          FlutterFlowTheme.of(context).titleMedium.fontWeight,
-                      fontStyle:
-                          FlutterFlowTheme.of(context).titleMedium.fontStyle,
+                      useGoogleFonts:
+                          !FlutterFlowTheme.of(context).titleMediumIsCustom,
                     ),
               ),
               Padding(
@@ -72,20 +65,12 @@ class _DialogWidgetState extends State<DialogWidget> {
                 child: Text(
                   'To top up your balance, first you need to choose a payment method.',
                   style: FlutterFlowTheme.of(context).labelMedium.override(
-                        font: GoogleFonts.openSans(
-                          fontWeight: FlutterFlowTheme.of(context)
-                              .labelMedium
-                              .fontWeight,
-                          fontStyle: FlutterFlowTheme.of(context)
-                              .labelMedium
-                              .fontStyle,
-                        ),
+                        fontFamily:
+                            FlutterFlowTheme.of(context).labelMediumFamily,
                         letterSpacing: 0.0,
-                        fontWeight:
-                            FlutterFlowTheme.of(context).labelMedium.fontWeight,
-                        fontStyle:
-                            FlutterFlowTheme.of(context).labelMedium.fontStyle,
                         lineHeight: 1.5,
+                        useGoogleFonts:
+                            !FlutterFlowTheme.of(context).labelMediumIsCustom,
                       ),
                 ),
               ),
@@ -110,18 +95,13 @@ class _DialogWidgetState extends State<DialogWidget> {
                         textStyle: FlutterFlowTheme.of(context)
                             .labelLarge
                             .override(
-                              font: GoogleFonts.openSans(
-                                fontWeight: FontWeight.w500,
-                                fontStyle: FlutterFlowTheme.of(context)
-                                    .labelLarge
-                                    .fontStyle,
-                              ),
+                              fontFamily:
+                                  FlutterFlowTheme.of(context).labelLargeFamily,
                               color: FlutterFlowTheme.of(context).greenWhite,
                               letterSpacing: 0.0,
                               fontWeight: FontWeight.w500,
-                              fontStyle: FlutterFlowTheme.of(context)
-                                  .labelLarge
-                                  .fontStyle,
+                              useGoogleFonts: !FlutterFlowTheme.of(context)
+                                  .labelLargeIsCustom,
                             ),
                         elevation: 0.0,
                         borderSide: BorderSide(

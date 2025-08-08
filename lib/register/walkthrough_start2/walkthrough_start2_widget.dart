@@ -1,7 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'walkthrough_start2_model.dart';
 export 'walkthrough_start2_model.dart';
 
@@ -45,17 +44,13 @@ class _WalkthroughStart2WidgetState extends State<WalkthroughStart2Widget> {
           'Keep track of every transaction and plan your expenses',
           textAlign: TextAlign.start,
           style: FlutterFlowTheme.of(context).labelMedium.override(
-                font: GoogleFonts.openSans(
-                  fontWeight:
-                      FlutterFlowTheme.of(context).labelMedium.fontWeight,
-                  fontStyle: FlutterFlowTheme.of(context).labelMedium.fontStyle,
-                ),
+                fontFamily: FlutterFlowTheme.of(context).labelMediumFamily,
                 color: FlutterFlowTheme.of(context).info,
                 fontSize: 17.0,
                 letterSpacing: 0.0,
-                fontWeight: FlutterFlowTheme.of(context).labelMedium.fontWeight,
-                fontStyle: FlutterFlowTheme.of(context).labelMedium.fontStyle,
                 lineHeight: 1.5,
+                useGoogleFonts:
+                    !FlutterFlowTheme.of(context).labelMediumIsCustom,
               ),
         ),
       ),

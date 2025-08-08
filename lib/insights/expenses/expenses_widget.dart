@@ -71,22 +71,12 @@ class _ExpensesWidgetState extends State<ExpensesWidget> {
                     Text(
                       'Total transfers',
                       style: FlutterFlowTheme.of(context).labelMedium.override(
-                            font: GoogleFonts.openSans(
-                              fontWeight: FlutterFlowTheme.of(context)
-                                  .labelMedium
-                                  .fontWeight,
-                              fontStyle: FlutterFlowTheme.of(context)
-                                  .labelMedium
-                                  .fontStyle,
-                            ),
+                            fontFamily:
+                                FlutterFlowTheme.of(context).labelMediumFamily,
                             color: FlutterFlowTheme.of(context).secondaryText,
                             letterSpacing: 0.0,
-                            fontWeight: FlutterFlowTheme.of(context)
-                                .labelMedium
-                                .fontWeight,
-                            fontStyle: FlutterFlowTheme.of(context)
-                                .labelMedium
-                                .fontStyle,
+                            useGoogleFonts: !FlutterFlowTheme.of(context)
+                                .labelMediumIsCustom,
                           ),
                     ),
                     Padding(
@@ -96,17 +86,12 @@ class _ExpensesWidgetState extends State<ExpensesWidget> {
                         '\$17,298.95',
                         style:
                             FlutterFlowTheme.of(context).headlineSmall.override(
-                                  font: GoogleFonts.openSans(
-                                    fontWeight: FontWeight.w600,
-                                    fontStyle: FlutterFlowTheme.of(context)
-                                        .headlineSmall
-                                        .fontStyle,
-                                  ),
+                                  fontFamily: FlutterFlowTheme.of(context)
+                                      .headlineSmallFamily,
                                   letterSpacing: 0.0,
                                   fontWeight: FontWeight.w600,
-                                  fontStyle: FlutterFlowTheme.of(context)
-                                      .headlineSmall
-                                      .fontStyle,
+                                  useGoogleFonts: !FlutterFlowTheme.of(context)
+                                      .headlineSmallIsCustom,
                                 ),
                       ),
                     ),
@@ -159,21 +144,12 @@ class _ExpensesWidgetState extends State<ExpensesWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    font: GoogleFonts.ubuntu(
-                                      fontWeight: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontStyle,
-                                    ),
+                                    fontFamily: FlutterFlowTheme.of(context)
+                                        .bodyMediumFamily,
                                     letterSpacing: 0.0,
-                                    fontWeight: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .fontStyle,
+                                    useGoogleFonts:
+                                        !FlutterFlowTheme.of(context)
+                                            .bodyMediumIsCustom,
                                   ),
                             ),
                           ),
@@ -208,23 +184,13 @@ class _ExpensesWidgetState extends State<ExpensesWidget> {
                         style: FlutterFlowTheme.of(context)
                             .labelMedium
                             .override(
-                              font: GoogleFonts.openSans(
-                                fontWeight: FlutterFlowTheme.of(context)
-                                    .labelMedium
-                                    .fontWeight,
-                                fontStyle: FlutterFlowTheme.of(context)
-                                    .labelMedium
-                                    .fontStyle,
-                              ),
+                              fontFamily: FlutterFlowTheme.of(context)
+                                  .labelMediumFamily,
                               color: FlutterFlowTheme.of(context).secondaryText,
                               fontSize: 13.0,
                               letterSpacing: 0.0,
-                              fontWeight: FlutterFlowTheme.of(context)
-                                  .labelMedium
-                                  .fontWeight,
-                              fontStyle: FlutterFlowTheme.of(context)
-                                  .labelMedium
-                                  .fontStyle,
+                              useGoogleFonts: !FlutterFlowTheme.of(context)
+                                  .labelMediumIsCustom,
                             ),
                       ),
                       Text(
@@ -232,23 +198,13 @@ class _ExpensesWidgetState extends State<ExpensesWidget> {
                         style: FlutterFlowTheme.of(context)
                             .labelMedium
                             .override(
-                              font: GoogleFonts.openSans(
-                                fontWeight: FlutterFlowTheme.of(context)
-                                    .labelMedium
-                                    .fontWeight,
-                                fontStyle: FlutterFlowTheme.of(context)
-                                    .labelMedium
-                                    .fontStyle,
-                              ),
+                              fontFamily: FlutterFlowTheme.of(context)
+                                  .labelMediumFamily,
                               color: FlutterFlowTheme.of(context).secondaryText,
                               fontSize: 13.0,
                               letterSpacing: 0.0,
-                              fontWeight: FlutterFlowTheme.of(context)
-                                  .labelMedium
-                                  .fontWeight,
-                              fontStyle: FlutterFlowTheme.of(context)
-                                  .labelMedium
-                                  .fontStyle,
+                              useGoogleFonts: !FlutterFlowTheme.of(context)
+                                  .labelMediumIsCustom,
                             ),
                       ),
                       Text(
@@ -256,23 +212,13 @@ class _ExpensesWidgetState extends State<ExpensesWidget> {
                         style: FlutterFlowTheme.of(context)
                             .labelMedium
                             .override(
-                              font: GoogleFonts.openSans(
-                                fontWeight: FlutterFlowTheme.of(context)
-                                    .labelMedium
-                                    .fontWeight,
-                                fontStyle: FlutterFlowTheme.of(context)
-                                    .labelMedium
-                                    .fontStyle,
-                              ),
+                              fontFamily: FlutterFlowTheme.of(context)
+                                  .labelMediumFamily,
                               color: FlutterFlowTheme.of(context).secondaryText,
                               fontSize: 13.0,
                               letterSpacing: 0.0,
-                              fontWeight: FlutterFlowTheme.of(context)
-                                  .labelMedium
-                                  .fontWeight,
-                              fontStyle: FlutterFlowTheme.of(context)
-                                  .labelMedium
-                                  .fontStyle,
+                              useGoogleFonts: !FlutterFlowTheme.of(context)
+                                  .labelMediumIsCustom,
                             ),
                       ),
                       Text(
@@ -280,23 +226,13 @@ class _ExpensesWidgetState extends State<ExpensesWidget> {
                         style: FlutterFlowTheme.of(context)
                             .labelMedium
                             .override(
-                              font: GoogleFonts.openSans(
-                                fontWeight: FlutterFlowTheme.of(context)
-                                    .labelMedium
-                                    .fontWeight,
-                                fontStyle: FlutterFlowTheme.of(context)
-                                    .labelMedium
-                                    .fontStyle,
-                              ),
+                              fontFamily: FlutterFlowTheme.of(context)
+                                  .labelMediumFamily,
                               color: FlutterFlowTheme.of(context).secondaryText,
                               fontSize: 13.0,
                               letterSpacing: 0.0,
-                              fontWeight: FlutterFlowTheme.of(context)
-                                  .labelMedium
-                                  .fontWeight,
-                              fontStyle: FlutterFlowTheme.of(context)
-                                  .labelMedium
-                                  .fontStyle,
+                              useGoogleFonts: !FlutterFlowTheme.of(context)
+                                  .labelMediumIsCustom,
                             ),
                       ),
                       Text(
@@ -304,23 +240,13 @@ class _ExpensesWidgetState extends State<ExpensesWidget> {
                         style: FlutterFlowTheme.of(context)
                             .labelMedium
                             .override(
-                              font: GoogleFonts.openSans(
-                                fontWeight: FlutterFlowTheme.of(context)
-                                    .labelMedium
-                                    .fontWeight,
-                                fontStyle: FlutterFlowTheme.of(context)
-                                    .labelMedium
-                                    .fontStyle,
-                              ),
+                              fontFamily: FlutterFlowTheme.of(context)
+                                  .labelMediumFamily,
                               color: FlutterFlowTheme.of(context).secondaryText,
                               fontSize: 13.0,
                               letterSpacing: 0.0,
-                              fontWeight: FlutterFlowTheme.of(context)
-                                  .labelMedium
-                                  .fontWeight,
-                              fontStyle: FlutterFlowTheme.of(context)
-                                  .labelMedium
-                                  .fontStyle,
+                              useGoogleFonts: !FlutterFlowTheme.of(context)
+                                  .labelMediumIsCustom,
                             ),
                       ),
                       Text(
@@ -328,23 +254,13 @@ class _ExpensesWidgetState extends State<ExpensesWidget> {
                         style: FlutterFlowTheme.of(context)
                             .labelMedium
                             .override(
-                              font: GoogleFonts.openSans(
-                                fontWeight: FlutterFlowTheme.of(context)
-                                    .labelMedium
-                                    .fontWeight,
-                                fontStyle: FlutterFlowTheme.of(context)
-                                    .labelMedium
-                                    .fontStyle,
-                              ),
+                              fontFamily: FlutterFlowTheme.of(context)
+                                  .labelMediumFamily,
                               color: FlutterFlowTheme.of(context).secondaryText,
                               fontSize: 13.0,
                               letterSpacing: 0.0,
-                              fontWeight: FlutterFlowTheme.of(context)
-                                  .labelMedium
-                                  .fontWeight,
-                              fontStyle: FlutterFlowTheme.of(context)
-                                  .labelMedium
-                                  .fontStyle,
+                              useGoogleFonts: !FlutterFlowTheme.of(context)
+                                  .labelMediumIsCustom,
                             ),
                       ),
                     ].divide(SizedBox(height: 15.0)),
@@ -412,21 +328,11 @@ class _ExpensesWidgetState extends State<ExpensesWidget> {
                           sectionLabelStyle: FlutterFlowTheme.of(context)
                               .headlineSmall
                               .override(
-                                font: GoogleFonts.openSans(
-                                  fontWeight: FlutterFlowTheme.of(context)
-                                      .headlineSmall
-                                      .fontWeight,
-                                  fontStyle: FlutterFlowTheme.of(context)
-                                      .headlineSmall
-                                      .fontStyle,
-                                ),
+                                fontFamily: FlutterFlowTheme.of(context)
+                                    .headlineSmallFamily,
                                 letterSpacing: 0.0,
-                                fontWeight: FlutterFlowTheme.of(context)
-                                    .headlineSmall
-                                    .fontWeight,
-                                fontStyle: FlutterFlowTheme.of(context)
-                                    .headlineSmall
-                                    .fontStyle,
+                                useGoogleFonts: !FlutterFlowTheme.of(context)
+                                    .headlineSmallIsCustom,
                               ),
                         ),
                       ),
@@ -443,133 +349,73 @@ class _ExpensesWidgetState extends State<ExpensesWidget> {
                   Text(
                     'Jul',
                     style: FlutterFlowTheme.of(context).labelMedium.override(
-                          font: GoogleFonts.openSans(
-                            fontWeight: FlutterFlowTheme.of(context)
-                                .labelMedium
-                                .fontWeight,
-                            fontStyle: FlutterFlowTheme.of(context)
-                                .labelMedium
-                                .fontStyle,
-                          ),
+                          fontFamily:
+                              FlutterFlowTheme.of(context).labelMediumFamily,
                           color: FlutterFlowTheme.of(context).secondaryText,
                           fontSize: 13.0,
                           letterSpacing: 0.0,
-                          fontWeight: FlutterFlowTheme.of(context)
-                              .labelMedium
-                              .fontWeight,
-                          fontStyle: FlutterFlowTheme.of(context)
-                              .labelMedium
-                              .fontStyle,
+                          useGoogleFonts:
+                              !FlutterFlowTheme.of(context).labelMediumIsCustom,
                         ),
                   ),
                   Text(
                     'Aug',
                     style: FlutterFlowTheme.of(context).labelMedium.override(
-                          font: GoogleFonts.openSans(
-                            fontWeight: FlutterFlowTheme.of(context)
-                                .labelMedium
-                                .fontWeight,
-                            fontStyle: FlutterFlowTheme.of(context)
-                                .labelMedium
-                                .fontStyle,
-                          ),
+                          fontFamily:
+                              FlutterFlowTheme.of(context).labelMediumFamily,
                           color: FlutterFlowTheme.of(context).secondaryText,
                           fontSize: 13.0,
                           letterSpacing: 0.0,
-                          fontWeight: FlutterFlowTheme.of(context)
-                              .labelMedium
-                              .fontWeight,
-                          fontStyle: FlutterFlowTheme.of(context)
-                              .labelMedium
-                              .fontStyle,
+                          useGoogleFonts:
+                              !FlutterFlowTheme.of(context).labelMediumIsCustom,
                         ),
                   ),
                   Text(
                     'Sep',
                     style: FlutterFlowTheme.of(context).labelMedium.override(
-                          font: GoogleFonts.openSans(
-                            fontWeight: FlutterFlowTheme.of(context)
-                                .labelMedium
-                                .fontWeight,
-                            fontStyle: FlutterFlowTheme.of(context)
-                                .labelMedium
-                                .fontStyle,
-                          ),
+                          fontFamily:
+                              FlutterFlowTheme.of(context).labelMediumFamily,
                           color: FlutterFlowTheme.of(context).secondaryText,
                           fontSize: 13.0,
                           letterSpacing: 0.0,
-                          fontWeight: FlutterFlowTheme.of(context)
-                              .labelMedium
-                              .fontWeight,
-                          fontStyle: FlutterFlowTheme.of(context)
-                              .labelMedium
-                              .fontStyle,
+                          useGoogleFonts:
+                              !FlutterFlowTheme.of(context).labelMediumIsCustom,
                         ),
                   ),
                   Text(
                     'Oct',
                     style: FlutterFlowTheme.of(context).labelMedium.override(
-                          font: GoogleFonts.openSans(
-                            fontWeight: FlutterFlowTheme.of(context)
-                                .labelMedium
-                                .fontWeight,
-                            fontStyle: FlutterFlowTheme.of(context)
-                                .labelMedium
-                                .fontStyle,
-                          ),
+                          fontFamily:
+                              FlutterFlowTheme.of(context).labelMediumFamily,
                           color: FlutterFlowTheme.of(context).secondaryText,
                           fontSize: 13.0,
                           letterSpacing: 0.0,
-                          fontWeight: FlutterFlowTheme.of(context)
-                              .labelMedium
-                              .fontWeight,
-                          fontStyle: FlutterFlowTheme.of(context)
-                              .labelMedium
-                              .fontStyle,
+                          useGoogleFonts:
+                              !FlutterFlowTheme.of(context).labelMediumIsCustom,
                         ),
                   ),
                   Text(
                     'Nov',
                     style: FlutterFlowTheme.of(context).labelMedium.override(
-                          font: GoogleFonts.openSans(
-                            fontWeight: FlutterFlowTheme.of(context)
-                                .labelMedium
-                                .fontWeight,
-                            fontStyle: FlutterFlowTheme.of(context)
-                                .labelMedium
-                                .fontStyle,
-                          ),
+                          fontFamily:
+                              FlutterFlowTheme.of(context).labelMediumFamily,
                           color: FlutterFlowTheme.of(context).secondaryText,
                           fontSize: 13.0,
                           letterSpacing: 0.0,
-                          fontWeight: FlutterFlowTheme.of(context)
-                              .labelMedium
-                              .fontWeight,
-                          fontStyle: FlutterFlowTheme.of(context)
-                              .labelMedium
-                              .fontStyle,
+                          useGoogleFonts:
+                              !FlutterFlowTheme.of(context).labelMediumIsCustom,
                         ),
                   ),
                   Text(
                     'Dec',
                     style: FlutterFlowTheme.of(context).labelMedium.override(
-                          font: GoogleFonts.openSans(
-                            fontWeight: FlutterFlowTheme.of(context)
-                                .labelMedium
-                                .fontWeight,
-                            fontStyle: FlutterFlowTheme.of(context)
-                                .labelMedium
-                                .fontStyle,
-                          ),
+                          fontFamily:
+                              FlutterFlowTheme.of(context).labelMediumFamily,
                           color: FlutterFlowTheme.of(context).secondaryText,
                           fontSize: 13.0,
                           letterSpacing: 0.0,
-                          fontWeight: FlutterFlowTheme.of(context)
-                              .labelMedium
-                              .fontWeight,
-                          fontStyle: FlutterFlowTheme.of(context)
-                              .labelMedium
-                              .fontStyle,
+                          useGoogleFonts:
+                              !FlutterFlowTheme.of(context).labelMediumIsCustom,
                         ),
                   ),
                 ],
@@ -614,12 +460,8 @@ class _ExpensesWidgetState extends State<ExpensesWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    font: GoogleFonts.ubuntu(
-                                      fontWeight: FontWeight.w500,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontStyle,
-                                    ),
+                                    fontFamily: FlutterFlowTheme.of(context)
+                                        .bodyMediumFamily,
                                     color: FFAppState().selectedChart == false
                                         ? FlutterFlowTheme.of(context)
                                             .primaryText
@@ -628,9 +470,9 @@ class _ExpensesWidgetState extends State<ExpensesWidget> {
                                     fontSize: 15.0,
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.w500,
-                                    fontStyle: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .fontStyle,
+                                    useGoogleFonts:
+                                        !FlutterFlowTheme.of(context)
+                                            .bodyMediumIsCustom,
                                   ),
                             ),
                           ),
@@ -667,12 +509,8 @@ class _ExpensesWidgetState extends State<ExpensesWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    font: GoogleFonts.ubuntu(
-                                      fontWeight: FontWeight.w500,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontStyle,
-                                    ),
+                                    fontFamily: FlutterFlowTheme.of(context)
+                                        .bodyMediumFamily,
                                     color: valueOrDefault<Color>(
                                       FFAppState().selectedChart == true
                                           ? FlutterFlowTheme.of(context)
@@ -685,9 +523,9 @@ class _ExpensesWidgetState extends State<ExpensesWidget> {
                                     fontSize: 15.0,
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.w500,
-                                    fontStyle: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .fontStyle,
+                                    useGoogleFonts:
+                                        !FlutterFlowTheme.of(context)
+                                            .bodyMediumIsCustom,
                                   ),
                             ),
                           ),

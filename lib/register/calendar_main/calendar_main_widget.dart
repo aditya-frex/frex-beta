@@ -123,16 +123,12 @@ class _CalendarMainWidgetState extends State<CalendarMainWidget> {
                       locale: FFLocalizations.of(context).languageCode,
                     ),
                     style: FlutterFlowTheme.of(context).labelLarge.override(
-                          font: GoogleFonts.openSans(
-                            fontWeight: FontWeight.w600,
-                            fontStyle: FlutterFlowTheme.of(context)
-                                .labelLarge
-                                .fontStyle,
-                          ),
+                          fontFamily:
+                              FlutterFlowTheme.of(context).labelLargeFamily,
                           letterSpacing: 0.0,
                           fontWeight: FontWeight.w600,
-                          fontStyle:
-                              FlutterFlowTheme.of(context).labelLarge.fontStyle,
+                          useGoogleFonts:
+                              !FlutterFlowTheme.of(context).labelLargeIsCustom,
                         ),
                   ),
                   InkWell(
@@ -187,16 +183,12 @@ class _CalendarMainWidgetState extends State<CalendarMainWidget> {
                     'Mo',
                     textAlign: TextAlign.center,
                     style: FlutterFlowTheme.of(context).labelSmall.override(
-                          font: GoogleFonts.openSans(
-                            fontWeight: FontWeight.w600,
-                            fontStyle: FlutterFlowTheme.of(context)
-                                .labelSmall
-                                .fontStyle,
-                          ),
+                          fontFamily:
+                              FlutterFlowTheme.of(context).labelSmallFamily,
                           letterSpacing: 0.0,
                           fontWeight: FontWeight.w600,
-                          fontStyle:
-                              FlutterFlowTheme.of(context).labelSmall.fontStyle,
+                          useGoogleFonts:
+                              !FlutterFlowTheme.of(context).labelSmallIsCustom,
                         ),
                   ),
                 ),
@@ -205,16 +197,12 @@ class _CalendarMainWidgetState extends State<CalendarMainWidget> {
                     'Tu',
                     textAlign: TextAlign.center,
                     style: FlutterFlowTheme.of(context).labelSmall.override(
-                          font: GoogleFonts.openSans(
-                            fontWeight: FontWeight.w600,
-                            fontStyle: FlutterFlowTheme.of(context)
-                                .labelSmall
-                                .fontStyle,
-                          ),
+                          fontFamily:
+                              FlutterFlowTheme.of(context).labelSmallFamily,
                           letterSpacing: 0.0,
                           fontWeight: FontWeight.w600,
-                          fontStyle:
-                              FlutterFlowTheme.of(context).labelSmall.fontStyle,
+                          useGoogleFonts:
+                              !FlutterFlowTheme.of(context).labelSmallIsCustom,
                         ),
                   ),
                 ),
@@ -223,16 +211,12 @@ class _CalendarMainWidgetState extends State<CalendarMainWidget> {
                     'We',
                     textAlign: TextAlign.center,
                     style: FlutterFlowTheme.of(context).labelSmall.override(
-                          font: GoogleFonts.openSans(
-                            fontWeight: FontWeight.w600,
-                            fontStyle: FlutterFlowTheme.of(context)
-                                .labelSmall
-                                .fontStyle,
-                          ),
+                          fontFamily:
+                              FlutterFlowTheme.of(context).labelSmallFamily,
                           letterSpacing: 0.0,
                           fontWeight: FontWeight.w600,
-                          fontStyle:
-                              FlutterFlowTheme.of(context).labelSmall.fontStyle,
+                          useGoogleFonts:
+                              !FlutterFlowTheme.of(context).labelSmallIsCustom,
                         ),
                   ),
                 ),
@@ -241,16 +225,12 @@ class _CalendarMainWidgetState extends State<CalendarMainWidget> {
                     'Th',
                     textAlign: TextAlign.center,
                     style: FlutterFlowTheme.of(context).labelSmall.override(
-                          font: GoogleFonts.openSans(
-                            fontWeight: FontWeight.w600,
-                            fontStyle: FlutterFlowTheme.of(context)
-                                .labelSmall
-                                .fontStyle,
-                          ),
+                          fontFamily:
+                              FlutterFlowTheme.of(context).labelSmallFamily,
                           letterSpacing: 0.0,
                           fontWeight: FontWeight.w600,
-                          fontStyle:
-                              FlutterFlowTheme.of(context).labelSmall.fontStyle,
+                          useGoogleFonts:
+                              !FlutterFlowTheme.of(context).labelSmallIsCustom,
                         ),
                   ),
                 ),
@@ -259,16 +239,12 @@ class _CalendarMainWidgetState extends State<CalendarMainWidget> {
                     'Fr',
                     textAlign: TextAlign.center,
                     style: FlutterFlowTheme.of(context).labelSmall.override(
-                          font: GoogleFonts.openSans(
-                            fontWeight: FontWeight.w600,
-                            fontStyle: FlutterFlowTheme.of(context)
-                                .labelSmall
-                                .fontStyle,
-                          ),
+                          fontFamily:
+                              FlutterFlowTheme.of(context).labelSmallFamily,
                           letterSpacing: 0.0,
                           fontWeight: FontWeight.w600,
-                          fontStyle:
-                              FlutterFlowTheme.of(context).labelSmall.fontStyle,
+                          useGoogleFonts:
+                              !FlutterFlowTheme.of(context).labelSmallIsCustom,
                         ),
                   ),
                 ),
@@ -277,16 +253,12 @@ class _CalendarMainWidgetState extends State<CalendarMainWidget> {
                     'Sa',
                     textAlign: TextAlign.center,
                     style: FlutterFlowTheme.of(context).labelSmall.override(
-                          font: GoogleFonts.openSans(
-                            fontWeight: FontWeight.w600,
-                            fontStyle: FlutterFlowTheme.of(context)
-                                .labelSmall
-                                .fontStyle,
-                          ),
+                          fontFamily:
+                              FlutterFlowTheme.of(context).labelSmallFamily,
                           letterSpacing: 0.0,
                           fontWeight: FontWeight.w600,
-                          fontStyle:
-                              FlutterFlowTheme.of(context).labelSmall.fontStyle,
+                          useGoogleFonts:
+                              !FlutterFlowTheme.of(context).labelSmallIsCustom,
                         ),
                   ),
                 ),
@@ -295,16 +267,12 @@ class _CalendarMainWidgetState extends State<CalendarMainWidget> {
                     'Su',
                     textAlign: TextAlign.center,
                     style: FlutterFlowTheme.of(context).labelSmall.override(
-                          font: GoogleFonts.openSans(
-                            fontWeight: FontWeight.w600,
-                            fontStyle: FlutterFlowTheme.of(context)
-                                .labelSmall
-                                .fontStyle,
-                          ),
+                          fontFamily:
+                              FlutterFlowTheme.of(context).labelSmallFamily,
                           letterSpacing: 0.0,
                           fontWeight: FontWeight.w600,
-                          fontStyle:
-                              FlutterFlowTheme.of(context).labelSmall.fontStyle,
+                          useGoogleFonts:
+                              !FlutterFlowTheme.of(context).labelSmallIsCustom,
                         ),
                   ),
                 ),
@@ -378,14 +346,8 @@ class _CalendarMainWidgetState extends State<CalendarMainWidget> {
                             style: FlutterFlowTheme.of(context)
                                 .labelLarge
                                 .override(
-                                  font: GoogleFonts.openSans(
-                                    fontWeight: FlutterFlowTheme.of(context)
-                                        .labelLarge
-                                        .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
-                                        .labelLarge
-                                        .fontStyle,
-                                  ),
+                                  fontFamily: FlutterFlowTheme.of(context)
+                                      .labelLargeFamily,
                                   color: (calendarItem.isPreviousMonth ==
                                               true) ||
                                           (calendarItem.isNextMonth == true)
@@ -424,12 +386,8 @@ class _CalendarMainWidgetState extends State<CalendarMainWidget> {
                                           : FlutterFlowTheme.of(context)
                                               .primaryText),
                                   letterSpacing: 0.0,
-                                  fontWeight: FlutterFlowTheme.of(context)
-                                      .labelLarge
-                                      .fontWeight,
-                                  fontStyle: FlutterFlowTheme.of(context)
-                                      .labelLarge
-                                      .fontStyle,
+                                  useGoogleFonts: !FlutterFlowTheme.of(context)
+                                      .labelLargeIsCustom,
                                 ),
                           ),
                         ),
